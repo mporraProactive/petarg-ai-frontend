@@ -74,6 +74,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ userId, onUserIdChange }) => {
             chat_id: chatId,
             message_id: messageId,
             question: message,
+            messages: [], // Added empty messages array as requested
           }),
         }
       );
