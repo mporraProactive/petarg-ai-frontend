@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				fiuba: {
+					50: '#e6f0f9',
+					100: '#cce0f3',
+					200: '#99c2e6',
+					300: '#66a3da',
+					400: '#3385cd',
+					500: '#0066c1',
+					600: '#00529a',
+					700: '#003d74',
+					800: '#00294d',
+					900: '#001427',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +97,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'pulse-light': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.8'
+					}
+				},
+				'spin-slow': {
+					'0%': {
+						transform: 'rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'bounce-light': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'pulse-light': 'pulse-light 2s infinite ease-in-out',
+				'spin-slow': 'spin-slow 3s linear infinite',
+				'bounce-light': 'bounce-light 2s infinite ease-in-out'
 			}
 		}
 	},
